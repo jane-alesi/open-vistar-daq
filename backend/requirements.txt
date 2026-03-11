@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+paho-mqtt
+influxdb-client
+pydantic
+pytest
+httpx
+python-dotenv
