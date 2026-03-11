@@ -23,6 +23,9 @@ Open Vistar DAQ is an open-source project that allows students and educators to 
 
 We follow **GitHub Flow** (main + feature branches) and the **Spec-Driven Development** (SDD) workflow. All changes must pass CI/CD quality gates before merging.
 
+### AI-Assisted Development
+This project is optimized for **GitHub Copilot**. Detailed context and instructions can be found in [.github/copilot-instructions.md](.github/copilot-instructions.md) and [.github/copilot-rules.md](.github/copilot-rules.md). Contributors are encouraged to use these for a smoother development experience.
+
 ## Licenses
 - Software: [MIT](LICENSE.software)
 - Hardware: [CERN-OHL-W-2.0](LICENSE.hardware)
