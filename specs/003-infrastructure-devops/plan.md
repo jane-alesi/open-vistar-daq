@@ -1,19 +1,20 @@
-# Implementation Plan: Infrastructure & DevOps Enhancement
+# Implementation Plan: Infrastructure & DevOps Enhancement (GitHub Edition)
 
 **Branch**: `003-infrastructure-devops` | **Date**: 2026-03-11 | **Spec**: `specs/003-infrastructure-devops/spec.md`
 
 ## Summary
 
-This plan covers the migration of the Open Vistar DAQ project to GitLab, the implementation of GitLab CI/CD pipelines for code quality and security, the establishment of a branching strategy (GitFlow), and the maintenance of local CLI tools.
+This plan covers the hosting of the Open Vistar DAQ project on GitHub, the implementation of GitHub Actions pipelines for code quality and security, the establishment of a branching strategy (GitHub Flow), the configuration of GitHub Copilot support, and the maintenance of local CLI tools.
 
 ## Technical Context
 
-**Platform**: GitLab.com
-**CI/CD**: GitLab CI/CD (`.gitlab-ci.yml`)
+**Platform**: GitHub.com
+**CI/CD**: GitHub Actions (`.github/workflows/*.yml`)
 **Code Quality**: ESLint (Frontend), Ruff/Flake8 (Backend)
-**Security**: GitLab SAST, Dependency Scanning
-**Branching Strategy**: GitFlow (main, develop, feature/*, release/*, hotfix/*)
-**Tools**: gh, glab, uv, git
+**Security**: GitHub CodeQL, Dependency Graph, Secret Scanning
+**Branching Strategy**: GitHub Flow (main + short-lived feature branches)
+**Tools**: gh, uv, git, npm
+**AI Support**: GitHub Copilot (`.github/copilot-instructions.md`)
 
 ## Constitution Check
 
@@ -21,9 +22,10 @@ This plan covers the migration of the Open Vistar DAQ project to GitLab, the imp
 
 - **Library-First**: N/A (DevOps task)
 - **CLI Interface**: All DevOps scripts MUST be runnable via CLI.
-- **Test-First**: CI/CD MUST include test execution.
-- **Integration-First**: CI/CD MUST run integration tests.
-- **Simplicity**: Use standard GitLab templates for SAST/Quality.
+- **Test-First**: GitHub Actions MUST include test execution.
+- **Integration-First**: GitHub Actions MUST run integration tests.
+- **Simplicity**: Use standard GitHub Actions for Quality/Security.
+- **GitHub-First**: Repository is hosted on GitHub as required.
 
 ## Project Structure
 
@@ -39,13 +41,18 @@ specs/003-infrastructure-devops/
 ### Source Code (repository root)
 
 ```text
-.gitlab-ci.yml           # GitLab CI/CD configuration
+.github/
+├── workflows/           # GitHub Actions configuration
+│   ├── quality.yml      # Linting and Tests
+│   └── security.yml     # CodeQL and Scanning
+└── copilot-instructions.md # Copilot custom instructions
 ```
 
 ## Implementation Strategy
 
-1. **Research**: Identify latest versions of CLI tools and GitLab CI templates.
-2. **Design**: Draft `.gitlab-ci.yml` with stages: `lint`, `test`, `security`.
-3. **Branching**: Initialize GitFlow locally and push to GitLab.
-4. **GitLab Setup**: Create repository on GitLab, set visibility to public, and configure protection rules.
+1. **Research**: Identify latest GitHub Actions for Python (uv support) and React (npm).
+2. **Design**: Draft `.github/workflows/` with jobs: `lint`, `test`, `security`.
+3. **Branching**: Verify GitHub Flow locally and push to GitHub.
+4. **GitHub Setup**: Repository created, visibility public, and configure protection rules via `gh`.
 5. **Tooling**: Attempt tool updates and document results.
+6. **Copilot**: Create custom instructions to improve AI assistance quality.

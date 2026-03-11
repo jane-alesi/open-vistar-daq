@@ -1,13 +1,8 @@
 <!--
-Version change: 0.0.0 -> 1.0.0
+Version change: 1.0.0 -> 1.1.0
 List of modified principles:
-- [PRINCIPLE_1_NAME] -> I. Library-First
-- [PRINCIPLE_2_NAME] -> II. CLI Interface
-- [PRINCIPLE_3_NAME] -> III. Test-First (NON-NEGOTIABLE)
-- [PRINCIPLE_4_NAME] -> IV. Integration-First
-- [PRINCIPLE_5_NAME] -> V. Simplicity
-Added sections:
-- VI. Anti-Abstraction
+- VII. Dual-Licensing Compliance (Expanded)
+- VIII. GitHub-First Infrastructure (Added)
 Templates requiring updates: ✅ updated
 -->
 # open-vistar-frontend Constitution
@@ -35,6 +30,9 @@ Use framework features directly. Avoid creating thin wrappers around stable libr
 ### VII. Dual-Licensing Compliance
 Software MUST adhere to the MIT License. Hardware schematics MUST follow CERN-OHL-W-2.0. All files MUST include appropriate license headers and documentation must clearly distinguish between software and hardware components.
 
+### VIII. GitHub-First Infrastructure
+All source code and project management MUST happen on GitHub. We MUST use GitHub Flow for branching (main + feature branches). CI/CD MUST be implemented via GitHub Actions.
+
 ## Additional Constraints
 
 ### Technology Stack
@@ -45,6 +43,7 @@ Software MUST adhere to the MIT License. Hardware schematics MUST follow CERN-OH
 - Visualization: Apache ECharts
 - Infrastructure: Docker & Docker Compose
 - Testing: PyTest (Backend), Vitest/Playwright (Frontend)
+- CI/CD: GitHub Actions (Quality & Security)
 
 ## Development Workflow
 
@@ -58,4 +57,4 @@ Software MUST adhere to the MIT License. Hardware schematics MUST follow CERN-OH
 ## Governance
 This constitution supersedes all other development practices in this project. Amendments to these principles require a version bump and documentation of the rationale. All pull requests must verify compliance with these principles.
 
-**Version**: 1.0.0 | **Ratified**: 2026-03-11 | **Last Amended**: 2026-03-11
+**Version**: 1.1.0 | **Ratified**: 2026-03-11 | **Last Amended**: 2026-03-11
