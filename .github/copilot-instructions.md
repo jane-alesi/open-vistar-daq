@@ -35,6 +35,14 @@ This project aims to democratize high-energy physics visualization by providing 
   - Follow Spec-Driven Development (SDD) process: Spec -> Plan -> Tasks -> Implement.
   - References for SDD are located in `.specify/`.
 
+## AI & Agent Environment
+- **Copilot Workspace**: This project is optimized for GitHub Copilot Workspace and other coding agents.
+- **Environment Setup**: Pre-configured via `.github/workflows/copilot-setup-steps.yml`. 
+- **Setup Command (Backend)**: `cd backend && uv venv && uv pip install -r requirements.txt`
+- **Setup Command (Frontend)**: `cd frontend && npm install`
+- **Test Command (Backend)**: `cd backend && . .venv/bin/activate && PYTHONPATH=. pytest`
+- **Test Command (Frontend)**: `cd frontend && npm test`
+
 ## License & Headers
 Every new file MUST include the appropriate license header at the top.
 Software (.py, .ts, .tsx, .js):
